@@ -1,0 +1,17 @@
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.DataServices.deps.json
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.DataServices.runtimeconfig.json
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.DataServices.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\ref\StockManagment.DataServices.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.DataServices.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.Entities.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\bin\Debug\net6.0\StockManagment.Entities.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.csproj.AssemblyReference.cache
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.AssemblyInfoInputs.cache
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.AssemblyInfo.cs
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.csproj.CoreCompileInputs.cache
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.csproj.CopyComplete
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\ref\StockManagment.DataServices.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.DataServices\obj\Debug\net6.0\StockManagment.DataServices.genruntimeconfig.cache

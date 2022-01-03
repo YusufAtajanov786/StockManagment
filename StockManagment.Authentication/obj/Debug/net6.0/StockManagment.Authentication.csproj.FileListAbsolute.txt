@@ -1,0 +1,12 @@
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\bin\Debug\net6.0\StockManagment.Authentication.deps.json
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\bin\Debug\net6.0\StockManagment.Authentication.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\bin\Debug\net6.0\ref\StockManagment.Authentication.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\bin\Debug\net6.0\StockManagment.Authentication.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.AssemblyInfoInputs.cache
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.AssemblyInfo.cs
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.csproj.CoreCompileInputs.cache
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\ref\StockManagment.Authentication.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.csproj.AssemblyReference.cache
