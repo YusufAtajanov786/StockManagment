@@ -1,16 +1,19 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StockManagment.DataServices.IConfiguration;
 
 namespace StockManagment.Api.Controllers.v1
 {
-  
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UserController : BaseController
     {
       
 
-        public UserController(IUnitOfWork iUnitOfWork)
-            :base(iUnitOfWork)
+        public UserController(IUnitOfWork iUnitOfWork, UserManager<IdentityUser> userManager)
+            :base(iUnitOfWork, userManager)
         {
            
         }

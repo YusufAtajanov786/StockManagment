@@ -9,4 +9,3 @@ C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentica
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\ref\StockManagment.Authentication.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.pdb
-C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Authentication\obj\Debug\net6.0\StockManagment.Authentication.csproj.AssemblyReference.cache

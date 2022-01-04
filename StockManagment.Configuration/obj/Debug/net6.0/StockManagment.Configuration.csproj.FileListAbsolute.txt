@@ -2,7 +2,6 @@ C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configurat
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\bin\Debug\net6.0\StockManagment.Configuration.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\bin\Debug\net6.0\ref\StockManagment.Configuration.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\bin\Debug\net6.0\StockManagment.Configuration.pdb
-C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.csproj.AssemblyReference.cache
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.AssemblyInfoInputs.cache
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.AssemblyInfo.cs
