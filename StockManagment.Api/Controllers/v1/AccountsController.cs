@@ -381,8 +381,8 @@ namespace StockManagment.Api.Controllers.v1
                 }),
                 Expires = DateTime.UtcNow.Add(_jwtConfig.ExpiryTimeFrame),
                 SigningCredentials = new SigningCredentials(
-              new SymmetricSecurityKey(key),
-              SecurityAlgorithms.HmacSha256Signature
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature
                  )
             };
             // generate Security Token 

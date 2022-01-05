@@ -9,6 +9,6 @@ namespace StockManagment.DataServices.IRepository
 {
     public interface IUserRepository:IGenericRepository<User>
     {
-
+        Task<User> GetByIdentityId(Guid identityId);
     }
 }

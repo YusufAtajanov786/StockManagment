@@ -5,7 +5,7 @@ using StockManagment.DataServices.IConfiguration;
 
 namespace StockManagment.Api.Controllers.v1
 {
-    [Route("api/v{version:apiVersion}[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
     public class BaseController : ControllerBase

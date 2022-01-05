@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using StockManagment.DataServices.Data;
 using StockManagment.DataServices.IRepository;
 using StockManagment.Entities.DbSet;
@@ -18,6 +19,21 @@ namespace StockManagment.DataServices.Repository
             ) : base(appDbContext, logger)
         {
 
+        }
+
+        public async Task<User> GetByIdentityId(Guid identityId)
+        {
+            try
+            {
+                return await dbSet.Where(x => x.Status == 1 && x.Identity == identityId)
+                                    .AsNoTracking()
+                                    .FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "{Repo} This is all method has generated error", typeof(UserRepository));
+                return null;
+            }
         }
     }
 }

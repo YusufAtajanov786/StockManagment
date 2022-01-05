@@ -24,5 +24,8 @@ namespace StockManagment.Api.Controllers.v1
             var users = await _iUnitOfWork.UserRepository.All();
             return Ok(users);
         }
+
+
+       
     }
 }
