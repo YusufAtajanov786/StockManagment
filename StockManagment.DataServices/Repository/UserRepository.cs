@@ -21,6 +21,7 @@ namespace StockManagment.DataServices.Repository
 
         }
 
+       
         public async Task<User> GetByIdentityId(Guid identityId)
         {
             try

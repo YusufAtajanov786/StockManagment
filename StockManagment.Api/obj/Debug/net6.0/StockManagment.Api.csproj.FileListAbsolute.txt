@@ -72,3 +72,14 @@ C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\De
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\StockManagment.Authentication.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\StockManagment.Authentication.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.File.dll

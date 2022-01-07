@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -26,8 +27,9 @@ namespace StockManagment.Api.Controllers.v1
             IUnitOfWork unitOfWork,
             UserManager<IdentityUser> userManager,
             IOptionsMonitor<JwtConfig> optionsMonitor,
-            TokenValidationParameters tokenValidationParameters)
-            : base(unitOfWork, userManager)
+            TokenValidationParameters tokenValidationParameters,
+            IMapper mapper)
+            : base(unitOfWork, userManager,mapper)
         {
             _jwtConfig = optionsMonitor.CurrentValue;
             _tokenValidationParameters = tokenValidationParameters;

@@ -1,0 +1,12 @@
+2022-01-07 22:51:24.063 +05:00 [INF] User profile is available. Using 'C:\Users\Yusufboy_Atajanov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-07 22:51:24.470 +05:00 [INF] Now listening on: https://localhost:7145
+2022-01-07 22:51:24.470 +05:00 [INF] Now listening on: http://localhost:5145
+2022-01-07 22:51:24.471 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-07 22:51:24.472 +05:00 [INF] Hosting environment: Development
+2022-01-07 22:51:24.474 +05:00 [INF] Content root path: C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\
+2022-01-07 22:51:25.899 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2022-01-07 22:51:26.143 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2022-01-07 22:51:26.144 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 247.6328ms
+2022-01-07 22:51:26.148 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11952 application/javascript;+charset=utf-8 4.6212ms
+2022-01-07 22:51:26.320 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2022-01-07 22:51:26.408 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.7450ms

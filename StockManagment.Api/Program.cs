@@ -4,12 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using StockManagment.Authentication.Configuration;
 using StockManagment.DataServices.Data;
 using StockManagment.DataServices.IConfiguration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Seri Log
+builder.Host.UseSerilog((ctx, lc) => lc
+    //.Enrich.With(new ThreadIdEnricher())
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("log.txt",
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"));
 
 // Add services to the container.
 
@@ -94,6 +103,8 @@ builder.Services.AddSwaggerGen(c =>
     c.AddSecurityRequirement(securityRequirement);
 
 });
+// Add AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
