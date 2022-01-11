@@ -20,6 +20,8 @@ namespace StockManagment.DataServices.Data
 
         public IRefreshTokenReposiroty RefreshTokenReposiroty { get; private set; }
 
+        public IWarehouseRepository WarehouseRepository { get; private set; }
+
         public UnitOfWork(AppDbContext appDbContext, ILoggerFactory loggerFactory)
         {
             this._appDbContext = appDbContext;
@@ -27,8 +29,7 @@ namespace StockManagment.DataServices.Data
 
             UserRepository = new UserRepository(appDbContext, _logger);
             RefreshTokenReposiroty = new RefreshTokenRepository(appDbContext, _logger);
-
-
+            WarehouseRepository = new WarehouseRepository(appDbContext, _logger);   
         }
         public async Task CompleteAsync()
         {

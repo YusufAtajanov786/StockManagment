@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace StockManagment.DataServices.IRepository
 {
-    public interface IUserRepository:IGenericRepository<User>
+    public interface IWarehouseRepository:IGenericRepository<Warehouse>
     {
-        Task<User> GetByIdentityId(Guid identityId);
-
-      
     }
 }

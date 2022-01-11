@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "57f1af38-1e06-47d0-9a1b-5d46314ff81b": {
+      "ProjectGuid": "57f1af38-1e06-47d0-9a1b-5d46314ff81b",
+      "DisplayName": "StockManagment.Api",
+      "ColorIndex": 0
+    },
+    "e4de4ccb-a155-40d0-805a-711efb1f0c19": {
+      "ProjectGuid": "e4de4ccb-a155-40d0-805a-711efb1f0c19",
+      "DisplayName": "StockManagment.Entities",
+      "ColorIndex": 1
+    },
+    "ca509950-247c-4d1f-aa8c-991a7bfa3287": {
+      "ProjectGuid": "ca509950-247c-4d1f-aa8c-991a7bfa3287",
+      "DisplayName": "StockManagment.DataServices",
+      "ColorIndex": 2
+    },
+    "f05080ac-6867-47f8-b9ba-d35c1af7ef9a": {
+      "ProjectGuid": "f05080ac-6867-47f8-b9ba-d35c1af7ef9a",
+      "DisplayName": "StockManagment.Authentication",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

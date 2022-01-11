@@ -15,6 +15,8 @@ namespace StockManagment.DataServices.Data
 
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
+        public DbSet<Warehouse> Warehouses { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

@@ -13,6 +13,8 @@ namespace StockManagment.DataServices.IConfiguration
 
         IRefreshTokenReposiroty RefreshTokenReposiroty { get; }
 
+        IWarehouseRepository WarehouseRepository { get; }
+
         Task CompleteAsync();
     }
 }
