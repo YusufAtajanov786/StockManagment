@@ -213,6 +213,136 @@ namespace StockManagment.DataServices.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("StockManagment.Entities.DbSet.Contract_in", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("ContractDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ContractNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("ContractSumma")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirmName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FrimPhone")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("InSummaIntoContract")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("OutSummaFromContract")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("WarehouseId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("WarehouseId");
+
+                    b.ToTable("Contract_In");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.Factura_In", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ContractId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FacturaNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("FacturaSumma")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("WarehouseId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContractId");
+
+                    b.HasIndex("WarehouseId");
+
+                    b.ToTable("Factura_In");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.MockProduct", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Category")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UnitType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MockProducts");
+                });
+
             modelBuilder.Entity("StockManagment.Entities.DbSet.RefreshToken", b =>
                 {
                     b.Property<Guid>("Id")
@@ -298,6 +428,36 @@ namespace StockManagment.DataServices.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("StockManagment.Entities.DbSet.UserWarehouses", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("WarehouseId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("WarehouseId");
+
+                    b.ToTable("UserWarehouses");
+                });
+
             modelBuilder.Entity("StockManagment.Entities.DbSet.Warehouse", b =>
                 {
                     b.Property<Guid>("Id")
@@ -377,6 +537,44 @@ namespace StockManagment.DataServices.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("StockManagment.Entities.DbSet.Contract_in", b =>
+                {
+                    b.HasOne("StockManagment.Entities.DbSet.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StockManagment.Entities.DbSet.Warehouse", "Warehouse")
+                        .WithMany()
+                        .HasForeignKey("WarehouseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+
+                    b.Navigation("Warehouse");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.Factura_In", b =>
+                {
+                    b.HasOne("StockManagment.Entities.DbSet.Contract_in", "Contract_In")
+                        .WithMany()
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StockManagment.Entities.DbSet.Warehouse", "Warehouse")
+                        .WithMany()
+                        .HasForeignKey("WarehouseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contract_In");
+
+                    b.Navigation("Warehouse");
+                });
+
             modelBuilder.Entity("StockManagment.Entities.DbSet.RefreshToken", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
@@ -386,6 +584,35 @@ namespace StockManagment.DataServices.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.UserWarehouses", b =>
+                {
+                    b.HasOne("StockManagment.Entities.DbSet.User", "User")
+                        .WithMany("UserWarehouses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StockManagment.Entities.DbSet.Warehouse", "Warehouse")
+                        .WithMany("UserWarehouses")
+                        .HasForeignKey("WarehouseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+
+                    b.Navigation("Warehouse");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.User", b =>
+                {
+                    b.Navigation("UserWarehouses");
+                });
+
+            modelBuilder.Entity("StockManagment.Entities.DbSet.Warehouse", b =>
+                {
+                    b.Navigation("UserWarehouses");
                 });
 #pragma warning restore 612, 618
         }

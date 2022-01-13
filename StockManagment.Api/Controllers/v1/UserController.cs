@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using StockManagment.Configuration.Messages;
 using StockManagment.DataServices.IConfiguration;
 using StockManagment.Entities.DbSet;
 using StockManagment.Entities.DTOs.Errors;
@@ -48,9 +50,10 @@ namespace StockManagment.Api.Controllers.v1
 
         [HttpGet]
         [Route("GetUser", Name = "GetUser")]
-        public async Task<IActionResult> GetUser(Guid id)
+        public async Task<IActionResult> GetUser([FromBody] UserGetDTO userGetDTO)
         {
-            var user = await _iUnitOfWork.UserRepository.GetById(id);
+            Log.Information($"{userGetDTO.Id}");
+            var user = await _iUnitOfWork.UserRepository.GetById( new Guid(userGetDTO.Id));
             var result = new Result<User>();
             if (user == null)
             {
@@ -66,6 +69,38 @@ namespace StockManagment.Api.Controllers.v1
 
             result.Content = user;
             return Ok(result);
+        }
+
+      /*  [HttpDelete]
+        public async Task<IActionResult> DeleteUser(Guid id)
+        {
+
+        }*/
+
+        [HttpPut]
+        public async Task<IActionResult> PutUser([FromBody]UserUpdateDTO userDTO)
+        {
+            if (ModelState.IsValid)
+            {   
+
+                var mappedUser = _mapper.Map<User>(userDTO);
+                var isUpdated = await _iUnitOfWork.UserRepository.UpdateUser(mappedUser);
+                var result = new Result<User>();
+                if(isUpdated)
+                {
+                    await _iUnitOfWork.CompleteAsync();
+                    result.Content = mappedUser;
+                    return Ok(result);
+                }
+                result.Error = PopulateError(404,
+                         ErrorMessages.User.UserNotFound,
+                         ErrorMessages.Generic.InvalidPayload);
+                return BadRequest(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
 

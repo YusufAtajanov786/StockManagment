@@ -1114,6 +1114,16 @@
           "bin/placeholder/StockManagment.Authentication.dll": {}
         }
       },
+      "StockManagment.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/StockManagment.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StockManagment.Configuration.dll": {}
+        }
+      },
       "StockManagment.DataServices/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3286,6 +3296,11 @@
       "path": "../StockManagment.Authentication/StockManagment.Authentication.csproj",
       "msbuildProject": "../StockManagment.Authentication/StockManagment.Authentication.csproj"
     },
+    "StockManagment.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../StockManagment.Configuration/StockManagment.Configuration.csproj",
+      "msbuildProject": "../StockManagment.Configuration/StockManagment.Configuration.csproj"
+    },
     "StockManagment.DataServices/1.0.0": {
       "type": "project",
       "path": "../StockManagment.DataServices/StockManagment.DataServices.csproj",
@@ -3307,6 +3322,7 @@
       "Serilog.AspNetCore >= 4.1.0",
       "Serilog.Sinks.Console >= 4.0.1",
       "StockManagment.Authentication >= 1.0.0",
+      "StockManagment.Configuration >= 1.0.0",
       "StockManagment.DataServices >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -3345,6 +3361,9 @@
           "projectReferences": {
             "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.Authentication\\StockManagment.Authentication.csproj": {
               "projectPath": "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.Authentication\\StockManagment.Authentication.csproj"
+            },
+            "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.Configuration\\StockManagment.Configuration.csproj": {
+              "projectPath": "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.Configuration\\StockManagment.Configuration.csproj"
             },
             "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.DataServices\\StockManagment.DataServices.csproj": {
               "projectPath": "C:\\Users\\Yusufboy_Atajanov\\source\\repos\\StockManagment\\StockManagment.DataServices\\StockManagment.DataServices.csproj"

@@ -9,3 +9,4 @@ C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configurat
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\ref\StockManagment.Configuration.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.pdb
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Configuration\obj\Debug\net6.0\StockManagment.Configuration.csproj.AssemblyReference.cache

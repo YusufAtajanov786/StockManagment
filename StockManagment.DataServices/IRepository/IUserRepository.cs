@@ -11,6 +11,6 @@ namespace StockManagment.DataServices.IRepository
     {
         Task<User> GetByIdentityId(Guid identityId);
 
-      
+        Task<bool> UpdateUser(User user);
     }
 }

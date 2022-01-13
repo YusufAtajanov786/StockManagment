@@ -83,3 +83,5 @@ C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\De
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\StockManagment.Configuration.dll
+C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\bin\Debug\net6.0\StockManagment.Configuration.pdb

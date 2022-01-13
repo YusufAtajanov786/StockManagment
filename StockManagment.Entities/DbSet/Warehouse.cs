@@ -11,5 +11,7 @@ namespace StockManagment.Entities.DbSet
         public string Name { get; set; }
 
         public string Address { get; set; }
+
+        public IList<UserWarehouses> UserWarehouses { get; set; }
     }
 }

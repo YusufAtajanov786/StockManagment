@@ -15,6 +15,8 @@ namespace StockManagment.DataServices.IConfiguration
 
         IWarehouseRepository WarehouseRepository { get; }
 
+        IUserWarehouseRepository UserWarehouseRepository { get; }
+
         Task CompleteAsync();
     }
 }

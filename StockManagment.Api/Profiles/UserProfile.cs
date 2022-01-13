@@ -12,6 +12,14 @@ namespace StockManagment.Api.Profiles
                 .ForMember(
                 dest => dest.DateOfBirth,
                 from => from.MapFrom( x => $"{Convert.ToDateTime(x.DateOfBirth)}") );
+
+            CreateMap<UserUpdateDTO, User>()
+                .ForMember(
+                dest => dest.DateOfBirth,
+                from => from.MapFrom(x => $"{Convert.ToDateTime(x.DateOfBirth)}"))
+                .ForMember(
+                dest => dest.Id,
+                from => from.MapFrom(x => $"{new Guid(x.Id)}"));
         }
     }
 }

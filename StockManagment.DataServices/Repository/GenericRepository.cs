@@ -40,7 +40,7 @@ namespace StockManagment.DataServices.Repository
             return await dbSet.ToListAsync();
         }
 
-        public Task<bool> Delete(Guid id, string userId)
+        public virtual async Task<bool> Delete(Guid id, string userId)
         {
             throw new NotImplementedException();
         }

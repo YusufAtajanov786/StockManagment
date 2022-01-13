@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StockManagment.DataServices.IConfiguration;
+using StockManagment.Entities.DTOs.Errors;
 
 namespace StockManagment.Api.Controllers.v1
 {
@@ -26,6 +27,17 @@ namespace StockManagment.Api.Controllers.v1
             _iUnitOfWork = unitOfWork;
             _userManager = userManager;
             _mapper = mapper;
+        }
+
+
+        internal Error PopulateError(int code, string message, string type)
+        {
+            return new Error()
+            {
+                Code = code,
+                Message = message,
+                Type = type
+            };
         }
     }
 }

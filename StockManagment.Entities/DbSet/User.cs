@@ -19,5 +19,9 @@ namespace StockManagment.Entities.DbSet
 
         public DateTime DateOfBirth { get; set; }
 
+
+
+        public IList<UserWarehouses> UserWarehouses { get; set; }
+
     }
 }

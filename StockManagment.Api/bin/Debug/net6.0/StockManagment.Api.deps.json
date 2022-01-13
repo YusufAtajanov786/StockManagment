@@ -16,6 +16,7 @@
           "Serilog.AspNetCore": "4.1.0",
           "Serilog.Sinks.Console": "4.0.1",
           "StockManagment.Authentication": "1.0.0",
+          "StockManagment.Configuration": "1.0.0",
           "StockManagment.DataServices": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -770,6 +771,11 @@
           "StockManagment.Authentication.dll": {}
         }
       },
+      "StockManagment.Configuration/1.0.0": {
+        "runtime": {
+          "StockManagment.Configuration.dll": {}
+        }
+      },
       "StockManagment.DataServices/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.1",
@@ -1357,6 +1363,11 @@
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "StockManagment.Authentication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StockManagment.Configuration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
