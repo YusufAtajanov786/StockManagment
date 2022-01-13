@@ -24,6 +24,12 @@ namespace StockManagment.DataServices.Data
 
         public IUserWarehouseRepository UserWarehouseRepository { get; private set; }
 
+        public IContract_InRepository Contract_InRepository { get; private set; }
+
+        public IFactura_InRepository Factura_InRepository { get; private set; }
+
+        public IMockProductsRepository MockProductsRepository { get; private set; }
+
         public UnitOfWork(AppDbContext appDbContext, ILoggerFactory loggerFactory)
         {
             this._appDbContext = appDbContext;
@@ -33,6 +39,10 @@ namespace StockManagment.DataServices.Data
             RefreshTokenReposiroty = new RefreshTokenRepository(appDbContext, _logger);
             WarehouseRepository = new WarehouseRepository(appDbContext, _logger);
             UserWarehouseRepository = new UserWarehouseRepository(appDbContext, _logger);
+            Contract_InRepository = new Contract_InRepository(appDbContext,_logger);
+            Factura_InRepository = new Factura_InRepository(appDbContext, _logger);
+            MockProductsRepository = new MockProductsRepository(appDbContext, _logger);
+
         }
         public async Task CompleteAsync()
         {

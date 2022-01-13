@@ -17,6 +17,12 @@ namespace StockManagment.DataServices.IConfiguration
 
         IUserWarehouseRepository UserWarehouseRepository { get; }
 
+        IContract_InRepository Contract_InRepository { get; }
+
+        IFactura_InRepository Factura_InRepository { get; }
+
+        IMockProductsRepository MockProductsRepository { get; }
+
         Task CompleteAsync();
     }
 }
