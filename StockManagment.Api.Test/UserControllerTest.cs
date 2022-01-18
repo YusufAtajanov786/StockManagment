@@ -23,47 +23,45 @@ namespace StockManagment.Api.Test
         private  Mock<UserManager<IdentityUser>> userManagerStub = new Mock<UserManager<IdentityUser>>();
         private  Mock<IUnitOfWork> UnitOfWorkStub = new Mock<IUnitOfWork>();
 
+        [Fact]
+        public void GetUsers_WithExistingUsers_ReturnsAllUsers()
+        {
+            // Arrange
+            List<User> users = GetListOfUser();
+            var controller = new UserController(UnitOfWorkStub.Object, null, mapperStub.Object);
+            UnitOfWorkStub.Setup(x => x.UserRepository.All())
+                .ReturnsAsync(users);
 
+            // Act
+            var result = controller.GetUsers();
+            var actualResult = (result.Result as OkObjectResult).Value as PageResult<User>;
+
+            // Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+            users.Should().BeEquivalentTo(actualResult.Content);
+
+        }
 
         [Fact]
         public void PostUser_WithUserToCreate_ReturnsCreatedUser()
         {
             // Arrange
-            var userToCreate = new UserDTO()
-            {
-                FirstName = "Joseph",
-                LastName = "Tribuani",
-                Email = "yura@gmail.com",
-                Phone = "9989700000",
-                DateOfBirth = "09/27/1997"
-            };
-
-            var createdUser = new User()
-            {
-                Id = new Guid("1a14874a-9c42-4328-a8b6-2f966b815067"),
-                FirstName = "Joseph",
-                LastName = "Tribuani",
-                Email = "yura@gmail.com",
-                Phone = "9989700000",
-                DateOfBirth = Convert.ToDateTime("09/27/1997"),
-                Status = 1,
-                AddedDate = DateTime.Now,
-                UpdateDate = DateTime.Now
-            };
-
+            var userToCreate = GetUserDTO();
+            var createdUser = GetUser();
             var controller = new UserController(UnitOfWorkStub.Object, null, mapperStub.Object);
             UnitOfWorkStub.Setup(x => x.UserRepository.Add(It.IsAny<User>()))
                 .ReturnsAsync(true);
             mapperStub.Setup( x => x.Map<User>(It.IsAny<UserDTO>()))
                 .Returns(createdUser);
+
             // Act
-            var actualResult = controller.PostUser(userToCreate);
+            var result = controller.PostUser(userToCreate);
 
             // Assert
-            var expectedResult = (actualResult.Result as CreatedAtRouteResult).Value as Result<User>;
+            var actualResult = (result.Result as CreatedAtRouteResult).Value as Result<User>;
 
-            Assert.IsType<CreatedAtRouteResult>(actualResult.Result);
-            createdUser.Should().BeEquivalentTo(expectedResult.Content);
+            Assert.IsType<CreatedAtRouteResult>(result.Result);
+            createdUser.Should().BeEquivalentTo(actualResult.Content);
             
         }
 
@@ -83,18 +81,55 @@ namespace StockManagment.Api.Test
             
             var controller = new UserController(UnitOfWorkStub.Object, null, mapperStub.Object);
             controller.ModelState.Clear();
+            TypeDescriptor.AddProviderTransparent(
+           new AssociatedMetadataTypeTypeDescriptionProvider(typeof(UserDTO), typeof(UserDTO)), typeof(UserDTO));
             var context = new ValidationContext(userToCreate, null, null);
             var results = new List<ValidationResult>();
 
             // Act
-            var actualResult = controller.PostUser(userToCreate);
-            TypeDescriptor.AddProviderTransparent(
-            new AssociatedMetadataTypeTypeDescriptionProvider(typeof(UserDTO), typeof(UserDTO)), typeof(UserDTO));
+            var actualResult = controller.PostUser(userToCreate);           
             var isValid = Validator.TryValidateObject(userToCreate, context, results, true);
             
             // Assert
             Assert.False(isValid);
 
+        }
+        public UserDTO GetUserDTO()
+        {
+            return new UserDTO()
+            {
+                FirstName = "Joseph",
+                LastName = "Tribuani",
+                Email = "yura@gmail.com",
+                Phone = "9989700000",
+                DateOfBirth = "09/27/1997"
+            };
+        }
+
+        public User GetUser()
+        {
+            return new User()
+            {
+                Id = new Guid("1a14874a-9c42-4328-a8b6-2f966b815067"),
+                FirstName = "Joseph",
+                LastName = "Tribuani",
+                Email = "yura@gmail.com",
+                Phone = "9989700000",
+                DateOfBirth = Convert.ToDateTime("09/27/1997"),
+                Status = 1,
+                AddedDate = DateTime.Now,
+                UpdateDate = DateTime.Now
+            };
+        }
+
+        public List<User> GetListOfUser()
+        {
+            return new List<User>()
+            {
+                GetUser(),
+                GetUser(),
+                GetUser()
+            };
         }
     }
 }

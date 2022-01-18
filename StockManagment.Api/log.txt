@@ -1828,3 +1828,42 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
 2022-01-18 14:52:27.182 +05:00 [INF] Executed action StockManagment.Api.Controllers.v1.UserController.PostUser (StockManagment.Api) in 3.8021ms
 2022-01-18 14:52:27.183 +05:00 [INF] Executed endpoint 'StockManagment.Api.Controllers.v1.UserController.PostUser (StockManagment.Api)'
 2022-01-18 14:52:27.183 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/v1/User application/json 121 - 400 - application/problem+json;+charset=utf-8 9.9719ms
+2022-01-18 15:28:04.416 +05:00 [INF] User profile is available. Using 'C:\Users\Yusufboy_Atajanov\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-18 15:28:04.681 +05:00 [INF] Now listening on: https://localhost:7145
+2022-01-18 15:28:04.682 +05:00 [INF] Now listening on: http://localhost:5145
+2022-01-18 15:28:04.683 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-18 15:28:04.685 +05:00 [INF] Hosting environment: Development
+2022-01-18 15:28:04.686 +05:00 [INF] Content root path: C:\Users\Yusufboy_Atajanov\source\repos\StockManagment\StockManagment.Api\
+2022-01-18 15:28:05.801 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/index.html - -
+2022-01-18 15:28:06.087 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - -
+2022-01-18 15:28:06.087 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/index.html - - - 200 - text/html;charset=utf-8 290.1990ms
+2022-01-18 15:28:06.092 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - - - 200 11952 application/javascript;+charset=utf-8 4.2332ms
+2022-01-18 15:28:06.335 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - -
+2022-01-18 15:28:06.474 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7145/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.2391ms
+2022-01-18 15:28:14.557 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/v1/Accounts/Login application/json 59
+2022-01-18 15:28:14.589 +05:00 [INF] Executing endpoint 'StockManagment.Api.Controllers.v1.AccountsController.Login (StockManagment.Api)'
+2022-01-18 15:28:14.611 +05:00 [INF] Route matched with {action = "Login", controller = "Accounts", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StockManagment.Authentication.Models.DTOs.Incoming.UserLoginRequestDTO) on controller StockManagment.Api.Controllers.v1.AccountsController (StockManagment.Api).
+2022-01-18 15:28:15.377 +05:00 [INF] Entity Framework Core 6.0.1 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-01-18 15:28:15.813 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedEmail_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-01-18 15:28:16.100 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 36), @p4='?' (DbType = Int32), @p5='?' (Size = 62), @p6='?' (DbType = DateTime), @p7='?' (Size = 36), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "AddedDate", "ExpiryDate", "JwtId", "Status", "Token", "UpdateDate", "UserId", "isRevoked", "isUsed")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2022-01-18 15:28:16.128 +05:00 [INF] Executing OkObjectResult, writing value of type 'StockManagment.Authentication.Models.DTOs.Outgoing.UserLoginResponseDTO'.
+2022-01-18 15:28:16.138 +05:00 [INF] Executed action StockManagment.Api.Controllers.v1.AccountsController.Login (StockManagment.Api) in 1522.2103ms
+2022-01-18 15:28:16.141 +05:00 [INF] Executed endpoint 'StockManagment.Api.Controllers.v1.AccountsController.Login (StockManagment.Api)'
+2022-01-18 15:28:16.145 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/v1/Accounts/Login application/json 59 - 200 - application/json;+charset=utf-8 1587.3689ms
+2022-01-18 15:28:34.985 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7145/api/v1/User application/json 127
+2022-01-18 15:28:35.032 +05:00 [INF] Executing endpoint 'StockManagment.Api.Controllers.v1.UserController.PostUser (StockManagment.Api)'
+2022-01-18 15:28:35.037 +05:00 [INF] Route matched with {action = "PostUser", controller = "User", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostUser(StockManagment.Entities.DTOs.Incoming.UserDTO) on controller StockManagment.Api.Controllers.v1.UserController (StockManagment.Api).
+2022-01-18 15:28:35.074 +05:00 [INF] Entity Framework Core 6.0.1 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-01-18 15:28:35.128 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = DateTime), @p3='?' (Size = 14), @p4='?' (Size = 9), @p5='?' (DbType = Guid), @p6='?' (Size = 6), @p7='?' (Size = 6), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "AddedDate", "DateOfBirth", "Email", "FirstName", "Identity", "LastName", "Phone", "Status", "UpdateDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2022-01-18 15:28:35.134 +05:00 [INF] Executing CreatedAtRouteResult, writing value of type 'StockManagment.Entities.DTOs.Generic.Result`1[[StockManagment.Entities.DbSet.User, StockManagment.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-18 15:28:35.159 +05:00 [INF] Executed action StockManagment.Api.Controllers.v1.UserController.PostUser (StockManagment.Api) in 120.8619ms
+2022-01-18 15:28:35.162 +05:00 [INF] Executed endpoint 'StockManagment.Api.Controllers.v1.UserController.PostUser (StockManagment.Api)'
+2022-01-18 15:28:35.163 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7145/api/v1/User application/json 127 - 201 - application/json;+charset=utf-8 178.1374ms

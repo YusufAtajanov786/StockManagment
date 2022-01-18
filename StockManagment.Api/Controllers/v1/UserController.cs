@@ -31,8 +31,10 @@ namespace StockManagment.Api.Controllers.v1
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
+            var result = new PageResult<User>();
             var users = await _iUnitOfWork.UserRepository.All();
-            return Ok(users);
+            result.Content = (List<User>)users;
+            return Ok(result);
         }
 
 
