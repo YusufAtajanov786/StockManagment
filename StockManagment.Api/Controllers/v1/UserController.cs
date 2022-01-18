@@ -17,10 +17,13 @@ namespace StockManagment.Api.Controllers.v1
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UserController : BaseController
     {
-      
+       
 
-        public UserController(IUnitOfWork iUnitOfWork, UserManager<IdentityUser> userManager, IMapper mapper)
-            :base(iUnitOfWork, userManager, mapper)
+        public UserController(
+            IUnitOfWork iUnitOfWork,
+            UserManager<IdentityUser> userManager,
+            IMapper mapper
+            ):base(iUnitOfWork, userManager, mapper)
         {
            
         }
@@ -36,16 +39,26 @@ namespace StockManagment.Api.Controllers.v1
       
 
        [HttpPost]
-       public async Task<IActionResult> PostUser(UserDTO userDTO)
+       public async Task<IActionResult> PostUser([FromBody]UserDTO userDTO)
        {
-            var mappedUser = _mapper.Map<User>(userDTO);
-
-            await _iUnitOfWork.UserRepository.Add(mappedUser);
-            await _iUnitOfWork.CompleteAsync();
 
             var result = new Result<User>();
-            result.Content = mappedUser;
-            return CreatedAtRoute("GetUser", new {id = mappedUser.Id}, result);
+            if (ModelState.IsValid)
+            {
+                var mappedUser = _mapper.Map<User>(userDTO);
+                await _iUnitOfWork.UserRepository.Add(mappedUser);
+                await _iUnitOfWork.CompleteAsync();
+
+               
+                result.Content = mappedUser;
+                return CreatedAtRoute("GetUser", new { id = mappedUser.Id }, result);
+            }else
+            {
+                
+                result.Error = PopulateError( 400, ErrorMessages.User.UserFieldsNotFull, ErrorMessages.User.UserInvalidPayload);
+                return BadRequest(result);
+            }
+          
        }
 
         [HttpGet]

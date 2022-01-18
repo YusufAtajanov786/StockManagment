@@ -35,7 +35,7 @@ namespace StockManagment.DataServices.Repository
             return true;
         }
 
-        public async Task<IEnumerable<T>> All()
+        public virtual async Task<IEnumerable<T>> All()
         {
             return await dbSet.ToListAsync();
         }

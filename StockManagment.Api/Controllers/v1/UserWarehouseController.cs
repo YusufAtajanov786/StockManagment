@@ -16,8 +16,11 @@ namespace StockManagment.Api.Controllers.v1
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UserWarehouseController : BaseController
     {
-        public UserWarehouseController(IUnitOfWork iUnitOfWork, UserManager<IdentityUser> userManager, IMapper mapper)
-            : base(iUnitOfWork, userManager, mapper)
+        public UserWarehouseController(
+            IUnitOfWork iUnitOfWork,
+            UserManager<IdentityUser> userManager,
+            IMapper mapper
+            ): base(iUnitOfWork, userManager, mapper)
         {
 
         }

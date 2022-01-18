@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using StockManagment.DataServices.Data;
 using StockManagment.DataServices.IRepository;
 using StockManagment.Entities.DbSet;
@@ -18,6 +19,11 @@ namespace StockManagment.DataServices.Repository
            ) : base(appDbContext, logger)
         {
 
+        }
+
+        public async Task<IEnumerable<Contract_in>> GetAllContractsOfWarehouse( Guid warehouseId)
+        {
+            return await dbSet.Where(x => x.WarehouseId == warehouseId).ToListAsync();
         }
     }
 }

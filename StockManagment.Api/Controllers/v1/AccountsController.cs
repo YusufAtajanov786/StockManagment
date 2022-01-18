@@ -28,8 +28,8 @@ namespace StockManagment.Api.Controllers.v1
             UserManager<IdentityUser> userManager,
             IOptionsMonitor<JwtConfig> optionsMonitor,
             TokenValidationParameters tokenValidationParameters,
-            IMapper mapper)
-            : base(unitOfWork, userManager,mapper)
+            IMapper mapper
+            ): base(unitOfWork, userManager,mapper)
         {
             _jwtConfig = optionsMonitor.CurrentValue;
             _tokenValidationParameters = tokenValidationParameters;

@@ -18,8 +18,7 @@ namespace StockManagment.Api.Controllers.v1
             IUnitOfWork iUnitOfWork,
             UserManager<IdentityUser> userManager,
             IMapper mapper
-            )
-           : base(iUnitOfWork, userManager, mapper)
+            ): base(iUnitOfWork, userManager, mapper)
         {
 
         }

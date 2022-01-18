@@ -9,5 +9,6 @@ namespace StockManagment.DataServices.IRepository
 {
     public interface IContract_InRepository : IGenericRepository<Contract_in>
     {
+        Task<IEnumerable<Contract_in>> GetAllContractsOfWarehouse(Guid warehouseId);
     }
 }

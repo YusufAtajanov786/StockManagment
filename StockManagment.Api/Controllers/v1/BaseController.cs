@@ -18,7 +18,7 @@ namespace StockManagment.Api.Controllers.v1
 
         protected readonly IMapper _mapper;
 
-        public BaseController(
+       public BaseController(
        IUnitOfWork unitOfWork,
        UserManager<IdentityUser> userManager,
        IMapper mapper

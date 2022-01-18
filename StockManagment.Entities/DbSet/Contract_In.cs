@@ -13,9 +13,9 @@ namespace StockManagment.Entities.DbSet
 
         public int ContractNumber { get; set; }
 
-        public decimal ContractSumma { get; set; }
-        public decimal InSummaIntoContract { get; set; }
-        public decimal OutSummaFromContract { get; set; }
+        public decimal? ContractSumma { get; set; }
+        public decimal? InSummaIntoContract { get; set; }
+        public decimal? OutSummaFromContract { get; set; }
 
         public string FrimPhone { get; set; }
 

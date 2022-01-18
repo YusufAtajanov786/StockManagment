@@ -30,6 +30,10 @@ namespace StockManagment.Configuration.Messages
         public static class User
         {
             public static string UserNotFound = "User not found";
+
+            public static string UserInvalidPayload = "Invalid Payload";
+
+            public static string UserFieldsNotFull  = "User fields not full ";
         }
     }
 }
